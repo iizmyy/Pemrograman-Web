@@ -130,7 +130,7 @@
               Kirim email</a> </li>
             <li> <a href="#iframe"> Ke Iframe</a> </li>
             <li> <a href="#atas"> Ke Atas</a> </li>
-            <li> <a href="../[1] Dasar Pemrograman Web.pdf" target="blank"> Download Pdf</a> </li>
+            <li> <a href="resource/[1] Dasar Pemrograman Web.pdf" target="blank"> Download Pdf</a> </li>
             <li> <a href="2_struktur_dasar.html"> Buka halaman struktur dasar</a> </li>
           </ul>
 
