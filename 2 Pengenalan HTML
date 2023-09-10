@@ -138,7 +138,7 @@
           <!-- Iframe -->
           <h2 id="iframe">Iframe</h2>
           <iframe src="2_struktur_dasar.html" width="400" height="300"></iframe>
-          <iframe src="../[1] Dasar Pemrograman Web.pdf" width="400" height="300"></iframe>
+          <iframe src="resource/[1] Dasar Pemrograman Web.pdf" width="400" height="300"></iframe>
 
           <hr>
           <!-- Formulir -->
