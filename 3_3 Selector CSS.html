@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Selector CSS</title>
+        <style type="text/css">
+            h2{
+                color : red;
+            }
+            .biru{
+                color: blue;
+            }
+            #tebal{
+                font-weight: bold;
+                font-size: 20px;
+            }
+            div{
+                border: 1px solid black;
+                background-color: lightskyblue;
+                padding-top: 50px;
+                padding-right: 30px;
+                padding-bottom: 50px;
+                padding-left: 80px;
+            }
+            div:nth-child(8){
+                border: 0px solid black;
+                background-color: lightseagreen;
+                padding: 25px 50px;
+                margin: 0px;
+            }
+            li:hover{
+                background-color: lightgreen;
+                width: 100px;
+            }
+            #tiga::first-letter{
+                color: #0501dd;
+                font-size: 3em;
+            }
+            #tiga::selection{
+                background-color: yellow;
+            }
+        </style>      
+    </head>
+    <body>
+        <h2>HTML DAN CSS</h2>
+        <p class="biru">HTML merupakan singkatan dari Hypertext Markup Language</p>
+        <p class="biru" id="tebal">CSS merupakan singkatan dari Cascading Style Sheets</p>
+        <h2>Padding</h2>
+        <div>
+            Kegunaan CSS dalam pengembangan web adalah penyajian tampilan, memisahkan
+            struktur dan presentasi, dan membuat desain yang responsif. 
+        </div>
+        <br>
+        <h2>CSS-shorthand Property Padding</h2>
+        <div>
+            Elemen div ini mengimplementasikan CSS-shorthand untuk property padding
+            dengan nilai top dan bottom padding sebesar 25px dan left dan right padding sebesar 50px.
+            Elemen div ini menggunakan selector div yang mengimplementasikan pseudo-class 
+            nth-child untuk memilih elemen div yang merupakan child ke-8. 
+        </div>
+        <h2>Pseudo-Class : Hover Selector</h2>
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+            <li>Menu 4</li>
+        </ul>
+        <h2>Pseudo-Element : selection dan first-letter </h2>
+        <p id="tiga">Elemen &#60p&#62 menerapkan selector Pseudo-Element selection dan first-letter</p>
+    </body>
+</html>

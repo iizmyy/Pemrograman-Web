@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+        }
+        @media screen and (max-width: 480px){
+            div { background:red; }
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 960px){
+            div { background:green; }
+        }
+
+        @media screen and (min-width: 960px){
+            div { background:blue; }
+        }
+    </style>
+</head>
+<body>
+    <div> Elemen div yang dapat berubah warna background
+        sesuai dengan ukuran lebar layar 
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html><head>
+    <style>
+    body {
+        font: 100% Lucida Sans, Verdana;
+        margin: 20px;
+        line-height: 26px;
+    }
+    
+    .container {
+        xmin-width: 900px;
+    }
+    
+    .wrapper {
+        position: relative;
+        overflow: auto;
+    }
+    
+    #top, #sidebar, #bottom, .menuitem {
+        border-radius: 4px;
+        margin: 4px;
+    }
+    
+    #top {
+        background-color: #04AA6D;
+        color: #ffffff;
+        padding: 15px;
+    }
+    
+    #menubar {
+        width: 200px;
+        float: left
+    }
+    
+    #main {
+        padding: 10px;
+        margin: 0px 10px 0px 220px;
+    }
+    
+    #sidebar {
+        background-color: #32a4e7;
+        color: #ffffff;
+        padding: 10px;
+        width: 180px;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+    
+    #bottom {
+        border: 1px solid #d4d4d4;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        font-size: 70%;
+        line-height: 14px;
+    }
+    
+    #top h1, #top p, #menulist {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menuitem {
+        background-color: #f1f1f1;
+        border: 1px solid #d4d4d4;
+        list-style-type: none;
+        padding: 2px;
+        cursor: pointer;
+    }
+    
+    .menuitem:hover {
+        background-color: #ffffff;
+    }
+    
+    /*
+    .menuitem:first-child {
+       background-color:#04AA6D;
+       color: white;
+       font-weight:bold;
+    }*/
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+
+    p.font{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: italic;
+        font-variant: small-caps;
+        margin-bottom: 30px;   
+    }
+
+    p.teks{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: underline red dotted 3px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    @media (max-width: 800px) {
+        #sidebar {
+            width: auto;
+            position: relative;
+        } 
+        #main {
+            margin-right: 0;
+        }    
+           
+    }
+
+    @media (max-width: 600px) {
+        #menubar {
+            width: auto;
+            float: none;
+        }
+        #main {
+            margin: 0;
+        }    
+    }
+
+    .bg{
+        width: 150px; 
+        height: 150px;
+        background-color: #e4e4e4;
+        float: left;
+        margin: 10px;
+        background-image: url('resource/star.png');
+        background-size: 40px 40px;
+    }
+
+    .satu{
+        background-repeat: no-repeat;
+        background-position: 20px 50px;
+    }
+
+    .dua{
+        background-repeat: repeat-x;
+    }
+
+    ul.list{
+        list-style: url(resource/square_blue.gif);
+    }
+
+    p.rcorner{
+        border-radius: 25px;
+        background: #73AD21;
+        padding: 20px; 
+        width: 200px;
+        height: 150px;
+    }
+
+    p.bimageround{
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(resource/border.png) 30 round;
+    }
+    p.bimagestretch{
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(resource/border.png) 30 stretch;
+    }
+
+    p.teksshadow{
+        font-size: 20px;
+        text-shadow: 2px 2px 5px gray;
+    }
+
+    div.boxshadow{
+        width: 300px;
+        height: 100px;
+        padding: 15px;
+        margin: 50px 0px;
+        background-color: coral;
+        box-shadow: 1px 1px 30px 3px blueviolet;
+    }
+
+    div.gradient{
+        width: 300px;
+        height: 100px;
+        padding: 15px;
+        background-image: linear-gradient(to bottom, red, yellow);
+    }
+
+    p.overflow {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    p.wraping {
+        width: 200px;
+        border: 1px solid #000000;
+        word-wrap: break-word;
+    }
+
+    p.breaking {
+        width: 200px;
+        border: 1px solid #000000;
+        word-break: break-all;
+    }
+
+    div.transition{
+        width: 100px;
+        height: 50px;
+        background: red;
+        transition: width 2s, height 2s;
+    }
+
+    #trans1:hover {transition-timing-function: linear; width: 300px;}
+    #trans2:hover {transition-timing-function: ease;width: 300px;}
+    #trans3:hover {transition-timing-function: ease-in;width: 300px;}
+    #trans4:hover {transition-timing-function: ease-out;width: 300px;}
+    #trans5:hover {transition-timing-function: ease-in-out; width: 300px; height: 100px;}
+
+    div.animasi{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: relative;
+        animation: gerak 4s linear 1s infinite alternate;
+    }
+
+    @keyframes gerak {
+        0%{background-color: red;left: 20px; top: 0px;}
+        50%{background-color: yellow; left: 200px; top: 20px;}
+        100%{background-color: green; left: 20px; top: 0px}
+    }
+
+    div.row{
+        display: flex;
+        background: grey;
+        height: 200px;
+        align-items: center;
+    }
+
+    div.col{
+        background: gainsboro;
+        width: 100px;
+        height: 180px;
+        margin: 10px;
+        flex-wrap: wrap;
+    }
+
+    div.mcol{
+        column-count: 3;
+        column-rule: 1px dotted grey ;
+        column-gap: 30px;
+    }
+    
+    #tpeserta{
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #tpeserta th, #tpeserta td{
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #tpeserta tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+
+    #tpeserta tr:hover{
+        background-color: lightsalmon;
+    }
+
+    #tpeserta th{
+        padding: 12px;
+        text-align: center;
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    </style>
+       
+    </head>
+    <body>
+    
+    <div class="container wrapper">
+      <div id="top">
+        <h1>Property CSS</h1>
+        <p>Property CSS Lanjutan</p>
+      </div>
+      <div class="wrapper">
+       <div id="menubar">
+         <ul id="menulist">
+           <li class="menuitem"><a href="#font">Font</a></li>
+           <li class="menuitem"><a href="#teks">Text</a></li>
+           <li class="menuitem"><a href="#background">Background</a></li>
+           <li class="menuitem"><a href="#listStyle">List Style</a></li>
+           <li class="menuitem"><a href="#rcorner">Rounded Corner</a></li>
+           <li class="menuitem"><a href="#bimage">Border Image</a></li>
+           <li class="menuitem"><a href="#shadow">Shadow</a></li>
+           <li class="menuitem"><a href="#gradient">Gradient</a></li>
+           <li class="menuitem"><a href="#texteffect">Text Effect</a></li>
+           <li class="menuitem"><a href="#transition">Transition</a></li>
+           <li class="menuitem"><a href="#animasi">Animation</a></li>
+           <li class="menuitem"><a href="#flexbox">Flexbox</a></li>
+           <li class="menuitem"><a href="#multiplecol">Multiple Column</a></li>
+           <li class="menuitem"><a href="#form">Forms</a></li>
+           <li class="menuitem"><a href="#tabel">Table</a></li>
+        </ul>
+        </div>
+        <div id="main">
+            <h2 id="font">FONT</h1>
+            <p class="font"> Teks ini menggunakan property font-family Arial, Helvetica, Sans-serif
+                dengan ukuran font 18px, font-weight bold, font-style italic dan variant small-caps</p>
+            
+            <h2 id="teks">TEKS</h2>
+            <p class="teks">Teks ini menggunakan property text-transform uppercase, text-decoration underline, 
+                dan text-align center;</p>
+            
+            <h2 id="background">BACKGROUND</h2>
+            <div class="bg satu"></div>
+            <div class="bg dua"></div>
+
+            <h2 id="listStyle" style="clear: left;">LIST STYLE</h2>
+            <ul class="list">
+                <li>pilihan satu</li>
+                <li>pilihan dua</li>
+                <li>pilihan tiga</li>
+            </ul>
+
+            <h2 id="rcorner">ROUNDED CORNER</h2>
+            <p class="rcorner">Rounded corner dengan radius 25px</p>
+
+            <h2 id="bimage">BORDER IMAGE</h2>
+            <p class="bimageround">border image round</p>
+            <p class="bimagestretch">border image stretch</p>
+
+            <h2 id="shadow">SHADOW</h2>
+            <p class="teksshadow">Teks shadow</p>
+            <div class="boxshadow">Elemen div dengan shadow blur berwarna blueviolet
+                dengan radius 3px
+            </div>
+
+            <h2 id="gradient">GRADIENT</h2>
+            <div class="gradient">Elemen div dengan linear gradient dari warna merah ke kuning
+            </div>
+
+            <h2 id="texteffect">TEXT EFFECT</h2>
+            <p class="overflow">Elemen p dengan teks efek text overflow</p>
+            <p class="wraping">Elemen p dengan teks efek text word wrapping</p>
+            <p class="breaking">Elemen p dengan teks efek text word breaking</p>
+
+            <h2 id="transition">TRANSITION</h2>
+            <div class="transition" id="trans1">linear</div><br>
+            <div class="transition" id="trans2">ease</div><br>
+            <div class="transition" id="trans3">ease-in</div><br>
+            <div class="transition" id="trans4">ease-out</div><br>
+            <div class="transition" id="trans5">ease-in-out</div><br>
+
+            <h2 id="animasi">ANIMATION</h2>
+            <div class="animasi"></div>
+
+            <h2 id="flexbox">FLEXBOX</h2>
+            <div class="row">
+                <div class="col" style="flex-grow: 2">1</div>
+                <div class="col" style="flex-grow: 4">2</div>
+                <div class="col" style="flex-shrink: 2">3</div>
+            </div>
+
+            <h2 id="multiplecol">MULTIPLE COLUMNS</h2>
+            <div class="mcol">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam 
+                erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse 
+                molestie consequat, vel illum dolore eu feugiat nulla facilisis at 
+                vero eros et accumsan et iusto odio dignissim qui blandit praesent 
+                luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+                Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet 
+                doming id quod mazim placerat facer possim assum.</div>
+            
+            <h2 id="form">FORM CSS</h2>
+            <iframe src="4_2 Form CSS.html" style="border:none" height="600px"
+            width="100%" frameborder="1"></iframe>
+
+            <h2 id="tabel">Tabel CSS</h2>
+            <h2>Data Peserta Pelatihan</h1>
+            <table id="tpeserta">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Siti Maryam</td>
+                    <td>Jl. Pahlawan No. 123, Jakarta</td>
+                    <td>siti.maryam@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Muhammad Ali</td>
+                    <td>Jl. Merdeka No. 456, Bandung</td>
+                    <td>muhammad.ali@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Putri Permata</td>
+                    <td>Jl. Jenderal Sudirman No. 789, Surabaya</td>
+                    <td>putri.permata@example.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Rudi Susanto</td>
+                    <td>Jl. Diponegoro No. 1011, Yogyakarta</td>
+                    <td>rudi.susanto@example.com</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Dewi Citra</td>
+                    <td>Jl. Gatot Subroto No. 1213, Medan</td>
+                    <td>dewi.citra@example.com</td>
+                </tr>
+            </table>
+
+       </div>
+      </div> 
+          
+      <div id="bottom">
+        &copy; Pemrograman Web  2023
+      </div>
+    </div>
+    
+    </body></html>

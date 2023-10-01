@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Box Model</title>
+        <style type="text/css">
+            h3{
+                color : red;
+            }
+            .heightWidth{
+                margin: auto;
+                border: 1px solid black;
+                background-color: lightskyblue;
+                padding: 50px 30px;
+                max-width: 500px;
+                height: 100px;
+            }
+            #marginPaddingBox{
+                border: 0px solid black;
+                background-color: lightgray;
+                width: 300px;
+                height: 100px;
+                margin: 20px 0 0 100px;
+                padding: 20px 50px;
+            }
+            .kotak{
+                background: red;
+                width: 200px;
+                height: 50px;
+                margin: 20px;
+            }
+            .border{ 
+                border: 5px seagreen;
+                border-style: solid;
+            }
+            .outline{
+                outline: 3px seagreen;
+                outline-offset: 5px;
+                outline-style: dashed ;
+            }
+            div.relative{
+                background: grey; width: 400px; height: 300px;
+                position: relative;
+            }
+            div.absolute{
+                background: blue; width: 200px; height: 100px;
+                position: absolute; left: 20px; top: 30px;
+            }
+            div.fixed{
+                background: yellow; width: 200px; height: 100px;
+                position: fixed; right: -20px; top: 800px;
+            }
+            .boxScroll{
+                background: red;
+                width: 100px;
+                height: 100px;
+                overflow: scroll;
+                float: left;
+            }
+            .boxHidden{
+                background: red;
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+            }
+            img.floatRight{
+                width: 170px;
+                height: 170px;
+                margin-left: 10px;
+                float: right;
+            }
+            .satu{
+                display: block;
+            }
+            .dua{
+                display: none;
+            }
+            .tiga{
+                display: inline-block;
+                visibility: hidden;
+            }
+            .empat{
+                display: inline-block;
+            }
+            .lima{
+                display: inline;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2 style="text-align: center;"><mark>Box Model</mark></h2>
+        <h3>Property Height dan Width</h3>
+        <div class="heightWidth">
+            Elemen div ini mengimplementasikan konsep box model pada dengan property width dan height.
+            Nilai maksimum width sebesar 500px dan height 100px.
+        </div>
+        <h3>Property Margin dan Padding</h3>
+        <div id="marginPaddingBox">
+            Elemen div ini mengimplementasikan konsep box model pada dengan property margin dan padding.
+            Nilai margin top 20px, right dan bottom 0, dan left 100px. Nilai padding top dan bottom 30px, 
+            right dan left 50px.
+        </div>
+        <h3>Border dan Outline</h3>
+        <div class="kotak border">Border</div>
+        <div class="kotak outline">Outline</div>
+        <h3>Position</h3>
+        <div class="relative">relative
+            <div class="absolute">absolute</div>
+        </div>
+        <!--<div class="fixed">fixed</div>-->
+        <h3>Overflow</h3>
+        <div class="boxScroll">Elemen div ini mengimplementasikan 
+            property overflow : scroll pada elemen div.</div>
+        <div class="boxHidden">Elemen div ini mengimplementasikan 
+            property overflow : hidden pada elemen div. </div>
+        <h3>Float dan Clear</h3>
+        <p><img class="floatRight" src="resource/html.png" alt="HTML">
+            Hypertext Markup Language (HTML) adalah 
+            bahasa markah standar untuk dokumen yang dirancang untuk ditampilkan di peramban internet. 
+            Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets (CSS) dan bahasa skrip lainnya seperti 
+            JavaScript, VBScript, dan PHP.</p>
+        <p style="clear: right;"> Peramban internet menerima dokumen HTML dari server web atau dari 
+            penyimpanan lokal dan membuat dokumen menjadi halaman web multimedia. 
+            HTML menggambarkan struktur halaman web secara semantik dan isyarat 
+            awal yang disertakan untuk penampilan dokumen</p>
+        <h3>Display dan Visibility</h3>
+        <div class="kotak satu">Display Block</div>
+        <div class="kotak dua">Display None</div>
+        <div class="kotak tiga">Display Inline-Block, 
+            visibility Hidden</div>
+        <div class="kotak empat">Display Inline-Block</div>
+        <div class="kotak lima">Display Inline</div>
+    </body>
+</html>
