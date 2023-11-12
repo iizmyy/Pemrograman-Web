@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+<div class="input-data">
+    Perempuan : <input type="number" id="p"></input>
+    Laki-laki : <input type="number" id="l"></input>
+
+    <button onclick="pieChart()">Pie Chart</button>
+</div>
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+    function pieChart(){
+        var p = document.getElementById("p").value;
+        var l = document.getElementById("l").value;
+
+        const xArray = ["Perempuan", "Laki-Laki" ];
+        const yArray = [p, l];
+        
+        const layout = {title:"Mahasiswa Kelas Pemrograman Web"};
+        const data = [{labels:xArray, values:yArray, type:"pie"}];
+        
+        Plotly.newPlot("myPlot", data, layout);
+    }
+</script>
+
+</body>
+</html>

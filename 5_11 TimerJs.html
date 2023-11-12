@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <script>
+        let angka = 0;
+        let timer;
+        let timeout;
+
+        function tampilkanAngka(){
+            document.getElementById('timer').innerHTML = angka;
+            angka++;
+        }
+
+        function setTimer(){
+            timer = setInterval('tampilkanAngka()', 100);
+        }
+
+        function jalankanTimer(){
+            timeout = setTimeout('setTimer()', 3000)
+        }
+        
+        function hentikanTimer(){
+            clearInterval(timer);
+        } 
+
+        function hentikanTimeout(){
+            clearTimeout(timeout);
+            angka = 0;
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id="timer" style="text-align: center;">0</h1>
+    <div style="display:flex ; justify-content:center;">
+        <button onclick="jalankanTimer()">Jalankan Timer</button>
+        <button onclick="hentikanTimer()">Hentikan Timer</button> 
+        <button onclick="hentikanTimeout()">Reset</button>
+    </div>
+</body>
+</html>

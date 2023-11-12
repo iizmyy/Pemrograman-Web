@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objek</title>
+    <script>
+        mahasiswa = {
+        nim : '123',
+        nama : 'Ayu',
+        IPK : 3.5
+    }
+
+    document.write(mahasiswa.nim +', ' + mahasiswa['nama']
+    + ', ' + mahasiswa.IPK+'<br>')
+
+    mahasiswa.nim='123456';
+    delete mahasiswa.IPK;
+    document.write(mahasiswa.nim +', ' + mahasiswa['nama']
+    + ', ' + mahasiswa.IPK+'<br>')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

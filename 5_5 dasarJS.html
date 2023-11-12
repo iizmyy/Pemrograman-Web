@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar JS</title>
+    <script src="5_5_1 skripDasarJS.js"></script>
+</head>
+<body>
+    <script>
+        var a = "Selamat Datang!";
+        function selamat(){
+            var b = "Selamat pagi!";
+            document.write(a);
+        }
+        selamat();
+        //document.write(b);
+
+        var A = 10, B=2;
+        var C = A % B;
+        document.write("<br> 10 % 2 = " + C + '<br>');
+        
+        A++;
+        document.write(A);
+
+        var hasil = (A>B) ? "A lebih besar dari B":
+        "A lebih kecil dari B";
+        document.write("<br>" + hasil);
+
+        document.write("<h3> Percabangan </h3>")
+        percabangan();
+
+        document.write("<h3> Percabangan </h3>")
+        document.getElementById('perulangan').innerHTML=perulangan();
+    </script>
+
+    <div id="perulangan"></div>
+</body>
+</html>
